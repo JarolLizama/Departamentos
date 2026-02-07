@@ -1,15 +1,13 @@
-Este programa consiste en un sistema básico de registro y control de ventas anuales para una tienda que tiene tres departamentos: Ropa, Deportes y Juguetería. Utiliza una matriz (lista bidimensional) para almacenar las ventas de cada departamento en cada mes del año.
+Este programa es un sistema básico para registrar y controlar las ventas de una tienda durante todo el año. La tienda está dividida en tres departamentos: Ropa, Deportes y Juguetería.
 
-Las filas de la matriz representan los meses (de enero a diciembre) y las columnas representan los departamentos. Cada valor guardado en la matriz corresponde al monto de ventas de un departamento en un mes específico.
+El programa utiliza una matriz (arreglo bidimensional) para guardar la información. En esa matriz, las filas representan los meses del año y las columnas representan los departamentos. Cada número almacenado indica cuánto se vendió en un departamento específico durante un mes determinado.
 
-Primero, el programa realiza una captura inicial de datos. Recorre todos los meses del año y, para cada mes, solicita al usuario que ingrese las ventas de los tres departamentos. Esos tres valores se guardan en una lista que representa una fila de la matriz, y esa fila se agrega a la lista principal llamada “ventas”. Al final, se obtiene una matriz de 12 filas (meses) por 3 columnas (departamentos).
+Primero, el sistema permite registrar ventas, es decir, guardar un monto en la posición correspondiente de la matriz según el mes y el departamento. De esta manera, se va llenando la tabla de ventas.
 
-Después de capturar los datos, el programa utiliza distintos métodos y operaciones para administrar la información.
+Después, el programa ofrece tres operaciones principales para manejar los datos:
 
-El método mostrar_tabla() sirve para mostrar todas las ventas en forma de tabla. Primero imprime los encabezados (Mes, Ropa, Deportes y Juguetería). Luego recorre la lista de meses usando un índice y, para cada mes, muestra los valores almacenados en la matriz en las posiciones correspondientes. Este método se utiliza para ver el estado completo de las ventas, tanto al inicio como al final del programa.
+La primera es insertar o modificar una venta, que consiste en guardar o actualizar el monto vendido en un mes y departamento específicos.
 
-El programa también permite modificar una venta. Para ello, el usuario introduce el número de mes (del 1 al 12) y el número de departamento (1 para Ropa, 2 para Deportes, 3 para Juguetería). El programa valida que esos números estén dentro de los rangos correctos y luego accede directamente a la posición correspondiente en la matriz para reemplazar el valor anterior por un nuevo monto ingresado por el usuario.
+La segunda es buscar una venta, que permite consultar cuánto se vendió en cierto mes y departamento, mostrando el valor almacenado en la matriz.
 
-Otra parte del programa permite buscar las ventas de un mes en particular. El usuario escribe el nombre del mes, el programa lo busca dentro de la lista de meses y obtiene su posición. Con ese índice, accede a la fila correspondiente en la matriz y muestra las ventas de los tres departamentos para ese mes.
-
-Además, existe el método eliminar_venta(), que permite “eliminar” una venta específica. El usuario indica el mes y el departamento, y si los datos son válidos, el programa no borra el registro como tal, sino que reemplaza el valor de esa venta por 0. De esta forma, se simula que la venta fue eliminada, pero la estructura de la matriz se mantiene intacta.
+La tercera es eliminar una venta, que no borra la posición de la matriz, pero sí cambia el valor a 0, indicando que esa venta ya no cuenta.
